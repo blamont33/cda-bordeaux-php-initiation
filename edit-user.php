@@ -27,7 +27,6 @@ if (strtolower($_SERVER['REQUEST_METHOD']) === 'post') {
     $updateUserQuery->bindValue('email', $_POST['email']);
     $updateUserQuery->bindValue('phone', $_POST['phone']);
     $updateUserQuery->bindValue('id', $_GET['id']);
-
     $updateUserQuery->execute();
 
     header('Location: ' . $_SERVER['REQUEST_URI']);
